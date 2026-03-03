@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAFE | Welcome</title>
+
+    <!-- SEO -->
+    <meta name="description" content="CAFE - Fresh Coffee, Delicious Food, Cozy Ambience">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="container nav-container">
+        <div class="logo">☕ CAFE</div>
+
+        <!-- Hamburger Button -->
+        <button class="menu-toggle" id="menu-toggle">
+            ☰
+        </button>
+
+        <!-- Navigation -->
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+    <div class="container hero-content">
+        <h1>Welcome to CAFE</h1>
+        <p>Fresh Coffee • Delicious Food • Cozy Ambience</p>
+        <a href="#menu" class="btn">Explore Menu</a>
+    </div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>
+            At CAFE, we serve handcrafted coffee and freshly prepared meals 
+            in a warm and friendly atmosphere. Your comfort is our priority.
+        </p>
+    </div>
+</section>
+
+
+<!-- ================= MENU ================= -->
+<section id="menu" class="section">
+    <div class="container">
+        <h2>Our Menu</h2>
+
+        <div class="menu-container">
+
+            <div class="menu-card">
+                <h3>Espresso</h3>
+                <p>Strong and bold classic coffee.</p>
+                <span>₹120</span>
+            </div>
+
+            <div class="menu-card">
+                <h3>Cappuccino</h3>
+                <p>Rich espresso with steamed milk foam.</p>
+                <span>₹180</span>
+            </div>
+
+            <div class="menu-card">
+                <h3>Cold Coffee</h3>
+                <p>Chilled creamy blended coffee.</p>
+                <span>₹200</span>
+            </div>
+
+            <div class="menu-card">
+                <h3>Veg Sandwich</h3>
+                <p>Fresh veggies with toasted bread.</p>
+                <span>₹150</span>
+            </div>
+
+            <div class="menu-card">
+                <h3>Chocolate Cake</h3>
+                <p>Soft and rich chocolate delight.</p>
+                <span>₹220</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" class="section">
+    <div class="container">
+        <h2>Gallery</h2>
+        <p>Experience the cozy vibes and beautiful interiors of our cafe.</p>
+    </div>
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Email: cafe@email.com</p>
+        <p>Phone: +91 98765 00000</p>
+    </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="container">
+        <p>© 2026 CAFE | Designed with ❤️</p>
+    </div>
+</footer>
+
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+    // Scroll reveal animation
+    const sections = document.querySelectorAll(".section, .hero");
+
+    window.addEventListener("scroll", () => {
+        sections.forEach(section => {
+            const top = section.getBoundingClientRect().top;
+            const trigger = window.innerHeight - 100;
+
+            if (top < trigger) {
+                section.classList.add("show");
+            }
+        });
+    });
+
+    // Mobile Menu Toggle
+    const toggleBtn = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+
+    toggleBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>
